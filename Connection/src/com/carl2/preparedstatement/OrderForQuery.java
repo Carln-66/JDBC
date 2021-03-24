@@ -80,7 +80,6 @@ public class OrderForQuery {
         } finally {
             JDBCUtils.closeResource(connection, ps, rs);
         }
-
         return null;
     }
 

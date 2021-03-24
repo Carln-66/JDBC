@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98e695f7-1e78-41dc-9452-43d82b344cc6" name="Default Changelist" comment="" />
+    <list default="true" id="98e695f7-1e78-41dc-9452-43d82b344cc6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Connection/src/com/carl1/statementdemo/PreparedStatementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Connection/src/com/carl2/preparedstatement/PrepareStatementQueryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connection/src/com/carl1/statementdemo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Connection/src/com/carl1/statementdemo/User.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +20,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -23,6 +32,9 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1qAuoAPSgFrcL4DlZDO2VDGPJZP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
@@ -37,6 +49,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CourseFile/CSC8019/work/ice-cream-version2.0/ice-cream-order" />
@@ -59,7 +72,7 @@
       <recent name="D:\JavaProject\JDBC\Connection\src\Demo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OrderForQuery">
+  <component name="RunManager" selected="JUnit.PreparedStatementTest.testLogin">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -67,38 +80,6 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DemoForQuery.testQuery1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Connection" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.carl2.preparedstatement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.carl2.preparedstatement" />
-      <option name="MAIN_CLASS_NAME" value="com.carl2.preparedstatement.DemoForQuery" />
-      <option name="METHOD_NAME" value="testQuery1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JDBCUtils.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Connection" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.carl3.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.carl3.util" />
-      <option name="MAIN_CLASS_NAME" value="com.carl3.util.JDBCUtils" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,7 +115,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderForQuery.testQuery1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrepareStatementQueryTest.testGetForList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Connection" />
       <extension name="coverage">
         <pattern>
@@ -143,8 +124,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.carl2.preparedstatement" />
-      <option name="MAIN_CLASS_NAME" value="com.carl2.preparedstatement.OrderForQuery" />
-      <option name="METHOD_NAME" value="testQuery1" />
+      <option name="MAIN_CLASS_NAME" value="com.carl2.preparedstatement.PrepareStatementQueryTest" />
+      <option name="METHOD_NAME" value="testGetForList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrepareStatementQueryTest.testGetInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Connection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.carl2.preparedstatement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.carl2.preparedstatement" />
+      <option name="MAIN_CLASS_NAME" value="com.carl2.preparedstatement.PrepareStatementQueryTest" />
+      <option name="METHOD_NAME" value="testGetInstance" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PreparedStatementTest.testLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Connection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.carl1.statementdemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.carl1.statementdemo" />
+      <option name="MAIN_CLASS_NAME" value="com.carl1.statementdemo.PreparedStatementTest" />
+      <option name="METHOD_NAME" value="testLogin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PreparedStatementTest.testLogin" />
+        <item itemvalue="JUnit.PrepareStatementQueryTest.testGetForList" />
+        <item itemvalue="JUnit.PrepareStatementQueryTest.testGetInstance" />
         <item itemvalue="JUnit.OrderForQuery" />
         <item itemvalue="JUnit.OrderForQuery.testOrderForQuery" />
-        <item itemvalue="JUnit.OrderForQuery.testQuery1" />
-        <item itemvalue="JUnit.DemoForQuery.testQuery1" />
-        <item itemvalue="JUnit.JDBCUtils.test" />
       </list>
     </recent_temporary>
   </component>
@@ -168,11 +181,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616534888847</updated>
-      <workItem from="1616534889949" duration="31911000" />
+      <workItem from="1616534889949" duration="36317000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1616606239238</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616606239238</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

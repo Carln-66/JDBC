@@ -3,12 +3,12 @@ package com.carl1.statementdemo;
 public class User {
 
 	private String user;
-	private String password;
+	private int password;
 
 	public User() {
 	}
 
-	public User(String user, String password) {
+	public User(String user, int password) {
 		super();
 		this.user = user;
 		this.password = password;
@@ -27,11 +27,11 @@ public class User {
 		this.user = user;
 	}
 
-	public String getPassword() {
+	public int getPassword() {
 		return password;
 	}
 
-	public void setPassword(String password) {
+	public void setPassword(int password) {
 		this.password = password;
 	}
 

@@ -128,7 +128,6 @@ public class PrepareStatementQueryTest {
             if (rs.next()) {
                 T t = aClass.newInstance();
 
-
                 for (int i = 0; i < columnCount; i++) {
                     //获取每个列的列值，通过ResultSet
                     Object columnValue = rs.getObject(i + 1);

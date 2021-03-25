@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98e695f7-1e78-41dc-9452-43d82b344cc6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Connection/src/com/carl1/statementdemo/PreparedStatementTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Connection/src/com/carl2/preparedstatement/PrepareStatementQueryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Connection/img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Connection/src/com/carl4/bean/StuInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Connection/src/com/carl5/exercise/Exercise1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Connection/src/com/carl6/blob/BlobTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Connection/src/com/carl6/blob/InsertTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Connection/壁纸1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Connection/src/com/carl1/statementdemo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Connection/src/com/carl1/statementdemo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connection/src/com/carl2/preparedstatement/PrepareStatementQueryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Connection/src/com/carl2/preparedstatement/PrepareStatementQueryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connection/src/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Connection/src/jdbc.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +47,7 @@
     <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -52,7 +57,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CourseFile/CSC8019/work/ice-cream-version2.0/ice-cream-order" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Connection" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -66,13 +71,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaProject\JDBC\Connection" />
       <recent name="D:\JavaProject\JDBC\Connection\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaProject\JDBC\Connection" />
       <recent name="D:\JavaProject\JDBC\Connection\src\Demo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PreparedStatementTest.testLogin">
+  <component name="RunManager" selected="JUnit.InsertTest.testInsert3">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -84,80 +91,81 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderForQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BlobTest.query" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Connection" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.carl2.preparedstatement.*" />
+          <option name="PATTERN" value="com.carl6.blob.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.carl2.preparedstatement" />
-      <option name="MAIN_CLASS_NAME" value="com.carl2.preparedstatement.OrderForQuery" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderForQuery.testOrderForQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Connection" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.carl2.preparedstatement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.carl2.preparedstatement" />
-      <option name="MAIN_CLASS_NAME" value="com.carl2.preparedstatement.OrderForQuery" />
-      <option name="METHOD_NAME" value="testOrderForQuery" />
+      <option name="PACKAGE_NAME" value="com.carl6.blob" />
+      <option name="MAIN_CLASS_NAME" value="com.carl6.blob.BlobTest" />
+      <option name="METHOD_NAME" value="query" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrepareStatementQueryTest.testGetForList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BlobTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Connection" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.carl2.preparedstatement.*" />
+          <option name="PATTERN" value="com.carl6.blob.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.carl2.preparedstatement" />
-      <option name="MAIN_CLASS_NAME" value="com.carl2.preparedstatement.PrepareStatementQueryTest" />
-      <option name="METHOD_NAME" value="testGetForList" />
+      <option name="PACKAGE_NAME" value="com.carl6.blob" />
+      <option name="MAIN_CLASS_NAME" value="com.carl6.blob.BlobTest" />
+      <option name="METHOD_NAME" value="testInsert" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrepareStatementQueryTest.testGetInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InsertTest.testInsert1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Connection" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.carl2.preparedstatement.*" />
+          <option name="PATTERN" value="com.carl6.blob.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.carl2.preparedstatement" />
-      <option name="MAIN_CLASS_NAME" value="com.carl2.preparedstatement.PrepareStatementQueryTest" />
-      <option name="METHOD_NAME" value="testGetInstance" />
+      <option name="PACKAGE_NAME" value="com.carl6.blob" />
+      <option name="MAIN_CLASS_NAME" value="com.carl6.blob.InsertTest" />
+      <option name="METHOD_NAME" value="testInsert1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PreparedStatementTest.testLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InsertTest.testInsert2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Connection" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.carl1.statementdemo.*" />
+          <option name="PATTERN" value="com.carl6.blob.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.carl1.statementdemo" />
-      <option name="MAIN_CLASS_NAME" value="com.carl1.statementdemo.PreparedStatementTest" />
-      <option name="METHOD_NAME" value="testLogin" />
+      <option name="PACKAGE_NAME" value="com.carl6.blob" />
+      <option name="MAIN_CLASS_NAME" value="com.carl6.blob.InsertTest" />
+      <option name="METHOD_NAME" value="testInsert2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsertTest.testInsert3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Connection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.carl6.blob.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.carl6.blob" />
+      <option name="MAIN_CLASS_NAME" value="com.carl6.blob.InsertTest" />
+      <option name="METHOD_NAME" value="testInsert3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PreparedStatementTest.testLogin" />
-        <item itemvalue="JUnit.PrepareStatementQueryTest.testGetForList" />
-        <item itemvalue="JUnit.PrepareStatementQueryTest.testGetInstance" />
-        <item itemvalue="JUnit.OrderForQuery" />
-        <item itemvalue="JUnit.OrderForQuery.testOrderForQuery" />
+        <item itemvalue="JUnit.InsertTest.testInsert3" />
+        <item itemvalue="JUnit.InsertTest.testInsert2" />
+        <item itemvalue="JUnit.InsertTest.testInsert1" />
+        <item itemvalue="JUnit.BlobTest.testInsert" />
+        <item itemvalue="JUnit.BlobTest.query" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +189,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616534888847</updated>
-      <workItem from="1616534889949" duration="36317000" />
+      <workItem from="1616534889949" duration="37592000" />
+      <workItem from="1616659284977" duration="3234000" />
+      <workItem from="1616698214128" duration="13171000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1616606239238</created>
@@ -190,13 +200,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616606239238</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <created>1616612402809</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616612402809</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>

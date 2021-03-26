@@ -1,50 +1,113 @@
-package com.carl2.preparedstatement;
+package com.carl5.dao;
 
-import com.carl3.util.JDBCUtils;
-import com.carl4.bean.Demo;
-import com.carl4.bean.Order;
-import org.junit.Test;
+import com.carl1.util.JDBCUtils;
 
 import java.lang.reflect.Field;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @Auther: Carl
- * @Date: 2021/03/24/17:20
- * @Description: 利用PrepareStatement语句实现不同表的通用查询操作
+ * @Date: 2021/03/26/9:14
+ * @Description: 封装了针对数据表的通用操作
  */
-public class PrepareStatementQueryTest {
-
-    @Test
-    public void testGetForList(){
-        String sql = "select id, stuname, seat from demo where id < ?";
-        List<Demo> list = getForList(Demo.class, sql, 2);
-        list.forEach(System.out::println);
-
-        String sql1 = "select order_id orderId, order_name orderName, order_date orderDate from `order`";
-        List<Order> list1 = getForList(Order.class, sql1);
-        list1.forEach(System.out::println);
-    }
-
+public abstract class DAO {
 
     /**
     * @Author: Carl
-    * @Date: 2021/3/26 9:17
-    * @param: [aClass, sql, args]
-    * @return: java.util.List<T>
-    * @Description: 返回多个对象的查询操作
+    * @Date: 2021/3/26 9:27
+    * @param: [connection, sql, args]
+    * @return: int
+    * @Description: 考虑数据库事务后的增删改操作
     */
-    public <T> List<T> getForList(Class<T> aClass, String sql, Object... args) {
-        Connection connection = null;
+    public int update(Connection connection, String sql, Object... args) { //sql中占位符的个数应该和可变形参的长度相同
+        PreparedStatement ps = null;
+        try {
+            //预编译sql语句，返回PreparedStatement的实例
+            ps = connection.prepareStatement(sql);
+
+            //填充占位符
+            for (int i = 0; i < args.length; i++) {
+                ps.setObject(i + 1, args[i]);
+            }
+
+            //执行
+            return ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            //关闭资源
+            JDBCUtils.closeResource(null, ps);
+        }
+        return 0;
+    }
+
+    /**
+     * @Author: Carl
+     * @Date: 2021/3/24 17:36
+     * @param: [aClass, sql, args]
+     * @return: T
+     * @Description: 针对于不同表的通用查询操作，返回表中的一条记录(考虑事务)
+     */
+    public <T> T getInstance(Connection connection, Class<T> aClass, String sql, Object... args) {
         PreparedStatement ps = null;
         ResultSet rs = null;
         try {
-            connection = JDBCUtils.getConnection();
+            ps = connection.prepareStatement(sql);
+
+            for (int i = 0; i < args.length; i++) {
+                ps.setObject(i + 1, args[i]);
+            }
+
+            //执行，获取结果集
+            rs = ps.executeQuery();
+
+            //获取结果集元数据
+            ResultSetMetaData rsmd = rs.getMetaData();
+
+            //获取列数
+            int columnCount = rsmd.getColumnCount();
+
+            if (rs.next()) {
+                T t = aClass.newInstance();
+
+                for (int i = 0; i < columnCount; i++) {
+                    //获取每个列的列值，通过ResultSet
+                    Object columnValue = rs.getObject(i + 1);
+
+                    //获取每个列的列名，通过ResultSetMetaData  --不推荐使用
+//                    String columnName = rsmd.getColumnName(i + 1);
+
+                    //获取列的别名
+                    String columnLabel = rsmd.getColumnLabel(i + 1);
+
+                    //通过反射将对象指定名columnName的属性赋值为指定的值columnValue
+                    Field field = aClass.getDeclaredField(columnLabel);
+                    field.setAccessible(true);
+                    field.set(t, columnValue);
+                }
+                return t;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            com.carl3.util.JDBCUtils.closeResource(null, ps, rs);
+        }
+        return null;
+    }
+
+    /**
+     * @Author: Carl
+     * @Date: 2021/3/26 9:17
+     * @param: [aClass, sql, args]
+     * @return: java.util.List<T>
+     * @Description: 返回多个对象的查询操作
+     */
+    public <T> List<T> getForList(Connection connection, Class<T> aClass, String sql, Object... args) {
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
             ps = connection.prepareStatement(sql);
 
             for (int i = 0; i < args.length; i++) {
@@ -87,75 +150,37 @@ public class PrepareStatementQueryTest {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            JDBCUtils.closeResource(connection, ps, rs);
+            com.carl3.util.JDBCUtils.closeResource(null, ps, rs);
         }
         return null;
     }
 
-    @Test
-    public void testGetInstance() {
-        String sql = "select order_id orderId, order_name orderName, order_date orderDate from `order` where order_id = ?";
-        Order instance = getInstance(Order.class, sql, 5);
-        System.out.println(instance);
-
-        String sql1 = "select id, stuname, seat from demo where id = ?";
-        Demo instance1 = getInstance(Demo.class, sql1, 2);
-        System.out.println(instance1);
-    }
-
-
     /**
-     * @Author: Carl
-     * @Date: 2021/3/24 17:36
-     * @param: [aClass, sql, args]
-     * @return: T
-     * @Description: 针对于不同表的通用查询操作，返回表中的一条记录
-     */
-    public <T> T getInstance(Class<T> aClass, String sql, Object... args) {
-        Connection connection = null;
+    * @Author: Carl
+    * @Date: 2021/3/26 9:24
+    * @param: [connection, sql, args]
+    * @return: E
+    * @Description: 用于查询特殊值的通用方法
+    */
+    public <E> E getValue(Connection connection, String sql, Object... args){
         PreparedStatement ps = null;
         ResultSet rs = null;
         try {
-            connection = JDBCUtils.getConnection();
             ps = connection.prepareStatement(sql);
 
             for (int i = 0; i < args.length; i++) {
                 ps.setObject(i + 1, args[i]);
             }
 
-            //执行，获取结果集
             rs = ps.executeQuery();
 
-            //获取结果集元数据
-            ResultSetMetaData rsmd = rs.getMetaData();
-
-            //获取列数
-            int columnCount = rsmd.getColumnCount();
-
             if (rs.next()) {
-                T t = aClass.newInstance();
-
-                for (int i = 0; i < columnCount; i++) {
-                    //获取每个列的列值，通过ResultSet
-                    Object columnValue = rs.getObject(i + 1);
-
-                    //获取每个列的列名，通过ResultSetMetaData  --不推荐使用
-//                    String columnName = rsmd.getColumnName(i + 1);
-
-                    //获取列的别名
-                    String columnLabel = rsmd.getColumnLabel(i + 1);
-
-                    //通过反射将对象指定名columnName的属性赋值为指定的值columnValue
-                    Field field = aClass.getDeclaredField(columnLabel);
-                    field.setAccessible(true);
-                    field.set(t, columnValue);
-                }
-                return t;
+                return (E) rs.getObject(1);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         } finally {
-            JDBCUtils.closeResource(connection, ps, rs);
+            JDBCUtils.closeResource(null, ps, rs);
         }
         return null;
     }

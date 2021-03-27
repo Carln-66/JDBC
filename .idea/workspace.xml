@@ -2,32 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98e695f7-1e78-41dc-9452-43d82b344cc6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ConnectionPool/ConnectionPool.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConnectionPool/src/c3p0-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConnectionPool/src/com/carl1/connection/C2P0Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConnectionPool/src/com/carl1/connection/DBCPTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConnectionPool/src/com/carl2/util/JDBCUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConnectionPool/src/dbcp.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConnectionPool/src/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/Transaction.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/com/carl1/util/JDBCUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/com/carl2/connectiontest/ConnectionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/com/carl3/transaction/TransactionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/com/carl4/bean/StuInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/com/carl4/bean/UserTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/com/carl5/dao/DAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/com/carl5/dao/StuInfoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/com/carl5/dao/StuInfoDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/com/carl6/junit/StuInfoDAOImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/com/carl7/dao/DAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/com/carl7/dao/StuInfoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/com/carl7/dao/StuInfoDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/com/carl8/junit/StuInfoDAOImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transaction/src/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConnectionPool/src/com/carl1/connection/DruidTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConnectionPool/src/com/carl3/dbutils/QueryRunnerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConnectionPool/src/druid.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Connection/src/com/carl2/preparedstatement/PrepareStatementQueryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Connection/src/com/carl2/preparedstatement/PrepareStatementQueryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConnectionPool/ConnectionPool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectionPool/ConnectionPool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConnectionPool/src/com/carl2/util/JDBCUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectionPool/src/com/carl2/util/JDBCUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +62,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../数据库连接池组件/commons-pool-1.5.5/commons-pool-1.5.5.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../数据库连接池组件/commons-dbutils-1.7/commons-dbutils-1.7.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -120,93 +100,95 @@
       <recent name="com.carl1.util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DBCPTest.testGetConnection1">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.QueryRunnerTest.testQuery7">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C2P0Test.testGetConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QueryRunnerTest.testQuery3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ConnectionPool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.carl1.connection.*" />
+          <option name="PATTERN" value="com.carl3.dbutils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.carl1.connection" />
-      <option name="MAIN_CLASS_NAME" value="com.carl1.connection.C2P0Test" />
-      <option name="METHOD_NAME" value="testGetConnection" />
+      <option name="PACKAGE_NAME" value="com.carl3.dbutils" />
+      <option name="MAIN_CLASS_NAME" value="com.carl3.dbutils.QueryRunnerTest" />
+      <option name="METHOD_NAME" value="testQuery3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C2P0Test.testGetConnection1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QueryRunnerTest.testQuery4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ConnectionPool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.carl1.connection.*" />
+          <option name="PATTERN" value="com.carl3.dbutils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.carl1.connection" />
-      <option name="MAIN_CLASS_NAME" value="com.carl1.connection.C2P0Test" />
-      <option name="METHOD_NAME" value="testGetConnection1" />
+      <option name="PACKAGE_NAME" value="com.carl3.dbutils" />
+      <option name="MAIN_CLASS_NAME" value="com.carl3.dbutils.QueryRunnerTest" />
+      <option name="METHOD_NAME" value="testQuery4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DBCPTest.testGetConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QueryRunnerTest.testQuery5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ConnectionPool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.carl1.connection.*" />
+          <option name="PATTERN" value="com.carl3.dbutils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.carl1.connection" />
-      <option name="MAIN_CLASS_NAME" value="com.carl1.connection.DBCPTest" />
-      <option name="METHOD_NAME" value="testGetConnection" />
+      <option name="PACKAGE_NAME" value="com.carl3.dbutils" />
+      <option name="MAIN_CLASS_NAME" value="com.carl3.dbutils.QueryRunnerTest" />
+      <option name="METHOD_NAME" value="testQuery5" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DBCPTest.testGetConnection1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QueryRunnerTest.testQuery6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ConnectionPool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.carl1.connection.*" />
+          <option name="PATTERN" value="com.carl3.dbutils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.carl1.connection" />
-      <option name="MAIN_CLASS_NAME" value="com.carl1.connection.DBCPTest" />
-      <option name="METHOD_NAME" value="testGetConnection1" />
+      <option name="PACKAGE_NAME" value="com.carl3.dbutils" />
+      <option name="MAIN_CLASS_NAME" value="com.carl3.dbutils.QueryRunnerTest" />
+      <option name="METHOD_NAME" value="testQuery6" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StuInfoDAOImplTest.getstuInfoById (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Transaction" />
+    <configuration name="QueryRunnerTest.testQuery7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ConnectionPool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.carl8.junit.*" />
+          <option name="PATTERN" value="com.carl3.dbutils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.carl8.junit" />
-      <option name="MAIN_CLASS_NAME" value="com.carl8.junit.StuInfoDAOImplTest" />
-      <option name="METHOD_NAME" value="getstuInfoById" />
+      <option name="PACKAGE_NAME" value="com.carl3.dbutils" />
+      <option name="MAIN_CLASS_NAME" value="com.carl3.dbutils.QueryRunnerTest" />
+      <option name="METHOD_NAME" value="testQuery7" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -214,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DBCPTest.testGetConnection1" />
-        <item itemvalue="JUnit.DBCPTest.testGetConnection" />
-        <item itemvalue="JUnit.C2P0Test.testGetConnection1" />
-        <item itemvalue="JUnit.C2P0Test.testGetConnection" />
-        <item itemvalue="JUnit.StuInfoDAOImplTest.getstuInfoById (1)" />
+        <item itemvalue="JUnit.QueryRunnerTest.testQuery7" />
+        <item itemvalue="JUnit.QueryRunnerTest.testQuery6" />
+        <item itemvalue="JUnit.QueryRunnerTest.testQuery5" />
+        <item itemvalue="JUnit.QueryRunnerTest.testQuery4" />
+        <item itemvalue="JUnit.QueryRunnerTest.testQuery3" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +214,8 @@
       <updated>1616534888847</updated>
       <workItem from="1616534889949" duration="37592000" />
       <workItem from="1616659284977" duration="3234000" />
-      <workItem from="1616698214128" duration="42123000" />
+      <workItem from="1616698214128" duration="42755000" />
+      <workItem from="1616860105878" duration="6723000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1616606239238</created>
@@ -255,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616711978709</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1616783081681</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616783081681</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
